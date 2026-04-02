@@ -146,7 +146,7 @@ export const UserRole = () => {
               icon={<XIcon className="cursor-pointer" onClick={handleOverly} />}
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4 overflow-y-auto max-h-[400px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4 overflow-y-auto max-h-100">
               {ALL_PERMISSIONS.map((perm) => (
                 <div
                   key={perm.id}
