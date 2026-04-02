@@ -2,47 +2,27 @@ import {
   BookMarkedIcon,
   BookOpen,
   BookOpenIcon,
-  Calendar,
+  CalendarCheck,
   ChartColumnIncreasing,
-  CheckCircle,
+  FolderOpen,
+  GraduationCap,
   LayoutDashboardIcon,
   LucideCalendarCheck,
   LucideFileText,
+  Settings,
+  ShieldCheck,
   UserCheckIcon,
+  UserCog,
   Users,
 } from 'lucide-react';
 
-// cardData for dashboard home page
-export const CardData = [
-  {
-    id: "1",
-    decription: "Today's Classes",
-    value: "3",
-    icon: Calendar,
-    iconStyle: "text-blue-600 bg-blue-100 w-15 h-15 p-2 m-0 rounded-xl",
-  },
-  {
-    id: "2",
-    decription: "Total Students",
-    value: "142",
-    icon: Users,
-    iconStyle: "text-green-600 bg-green-100 w-15 h-15 p-2 m-0 rounded-xl",
-  },
-  {
-    id: "3",
-    decription: "Today's Classes",
-    value: "3",
-    icon: CheckCircle,
-    iconStyle: "text-purple-600 bg-purple-100 w-15 h-15 p-2 m-0 rounded-xl",
-  },
-  {
-    id: "4",
-    decription: "Today's Classes",
-    value: "3",
-    icon: BookOpen,
-    iconStyle: "text-orange-600 bg-orange-100 w-15 h-15 p-2 m-0 rounded-xl",
-  },
-];
+import boy1 from '../assets/boy1.jpg';
+import boy2 from '../assets/boy2.jpg';
+import boy3 from '../assets/boy3.jpg';
+import girl1 from '../assets/girl1.jpg';
+import girl2 from '../assets/girl2.jpg';
+import girl3 from '../assets/girl3.jpg';
+
 //schedule data for dashboard home page
 export const ScheduleData = [
   {
@@ -115,78 +95,99 @@ export const Announcements = [
   },
 ];
 //SideNav Links or Dashbaord links
-export const NavLinks = [
-  {
-    name: "Dashboard",
-    path: "/dashboard",
-    icon: LayoutDashboardIcon,
-  },
-  {
-    name: "My Classes",
-    path: "/dashboard/MyClasses",
-    icon: BookOpenIcon,
-  },
-  {
-    name: "Attendance",
-    path: "/dashboard/Attendance",
-    icon: LucideCalendarCheck,
-  },
-  {
-    name: "Academic Records",
-    path: "/dashboard/AcademicRecords",
-    icon: LucideFileText,
-  },
-  {
-    name: "Lessons",
-    path: "/dashboard/Lessons",
-    icon: BookMarkedIcon,
-  },
-  {
-    name: "Student Validation",
-    path: "/dashboard/StudentValidation",
-    icon: UserCheckIcon,
-  },
-  {
-    name: "Reports",
-    path: "/dashboard/Reports",
-    icon: ChartColumnIncreasing,
-  },
-];
-//Quick Dashboard Action Links
-export const QuickActionLinks = [
-  {
-    name: "Mark Attendance",
-    icon: CheckCircle,
-    path: "/dashboard/Attendance",
-  },
-  {
-    name: "Enter Grades",
-    icon: BookOpen,
-    path: "/dashboard/AcademicRecords",
-  },
-  {
-    name: "Upload Lesson",
-    icon: Calendar,
-    path: "/dashboard/Lessons",
-  },
-  {
-    name: "Generate Report",
-    icon: Users,
-    path: "/dashboard/Reports",
-  },
-];
-//Array of scheduled classes
-// export const classes =[
-//     {
-//         class: "Grade 10-A",
-//         subject:
-//     }
-// ]
+export const NavLinks = {
+  teacher: [
+    {
+      name: "Dashboard",
+      path: "/teacher/dashboard",
+      icon: LayoutDashboardIcon,
+    },
+    {
+      name: "My Classes",
+      path: "/teacher/MyClasses",
+      icon: BookOpenIcon,
+    },
+    {
+      name: "Attendance",
+      path: "/teacher/Attendance",
+      icon: LucideCalendarCheck,
+    },
+    {
+      name: "Academic Records",
+      path: "/teacher/AcademicRecords",
+      icon: LucideFileText,
+    },
+    {
+      name: "Lessons",
+      path: "/teacher/Lessons",
+      icon: BookMarkedIcon,
+    },
+    {
+      name: "Student Validation",
+      path: "/teacher/StudentValidation",
+      icon: UserCheckIcon,
+    },
+    {
+      name: "Reports",
+      path: "/teacher/Reports",
+      icon: ChartColumnIncreasing,
+    },
+  ],
+  admin: [
+    {
+      name: "Dashboard",
+      path: "/admin/dashboard",
+      icon: LayoutDashboardIcon,
+    },
+    {
+      name: "Students Management",
+      path: "/admin/students",
+      icon: Users,
+    },
+    {
+      name: "Teacher & Staff",
+      path: "/admin/teachers",
+      icon: UserCog,
+    },
+    {
+      name: "Academic Admin",
+      path: "/admin/academics",
+      icon: GraduationCap,
+    },
+    {
+      name: "Attendance Oversight",
+      path: "/admin/attendance",
+      icon: CalendarCheck,
+    },
+    {
+      name: "Document Management",
+      path: "/admin/documentManagement",
+      icon: FolderOpen,
+    },
+    {
+      name: "Student ID & Security",
+      path: "/admin/security",
+      icon: ShieldCheck,
+    },
+    {
+      name: "Reports & Analytics",
+      path: "/admin/reports",
+      icon: ChartColumnIncreasing,
+    },
+    {
+      name: "System Configuration",
+      path: "/admin/settings",
+      icon: Settings,
+    },
+  ],
+};
+
 // Student List
 export const studentList = [
   {
     studentId: "STU001",
     name: "Emma Wilson",
+    pass_port: boy1,
     status: "Active",
     attendance: "95%",
     grade: "A",
@@ -196,10 +197,13 @@ export const studentList = [
     phone: "+234 9176456732",
     dob: "may-15-2009",
     dateIn: "Feb 10, 2026",
+    section: "A",
+    rollNo: "1001",
   },
   {
     studentId: "STU002",
     name: "James Brown",
+    pass_port: boy2,
     status: "Active",
     attendance: "92%",
     grade: "A-",
@@ -209,10 +213,13 @@ export const studentList = [
     phone: "+234 9090706070",
     dob: "may-15-2005",
     dateIn: "Feb 9, 2026",
+    section: "A",
+    rollNo: "1102",
   },
   {
     studentId: "STU003",
     name: "Olivia Davis",
+    pass_port: boy3,
     status: "Active",
     attendance: "98%",
     grade: "A+",
@@ -222,10 +229,13 @@ export const studentList = [
     phone: "+234 7090236745",
     dob: "may-15-2005",
     dateIn: "Dec 9, 2025",
+    section: "A",
+    rollNo: "901",
   },
   {
     studentId: "STU004",
     name: "Noah Martinez",
+    pass_port: boy2,
     status: "Inactive",
     attendance: "88%",
     grade: "B+",
@@ -235,10 +245,13 @@ export const studentList = [
     phone: "+234 9176456732",
     dob: "may-15-2007",
     dateIn: "Feb 9, 2026",
+    section: "A",
+    rollNo: "1201",
   },
   {
     studentId: "STU005",
     name: "Sophia Garcia",
+    pass_port: girl1,
     status: "Active",
     attendance: "94%",
     grade: "A",
@@ -248,10 +261,13 @@ export const studentList = [
     phone: "+234 9125673401",
     dob: "may-15-2010",
     dateIn: "Feb 10, 2026",
+    section: "A",
+    rollNo: "1025",
   },
   {
     studentId: "STU006",
-    name: "Liam Anderson",
+    name: "Lyia Anderson",
+    pass_port: girl2,
     status: "Inactive",
     attendance: "90%",
     grade: "B+",
@@ -261,10 +277,13 @@ export const studentList = [
     phone: "+234 7167575641",
     dob: "may-15-2009",
     dateIn: "Feb 10, 2026",
+    section: "A",
+    rollNo: "679",
   },
   {
     studentId: "STU007",
     name: "Ava Taylor",
+    pass_port: girl3,
     status: "Active",
     attendance: "96%",
     grade: "A",
@@ -274,10 +293,13 @@ export const studentList = [
     phone: "+234 9176456732",
     dob: "may-15-2009",
     dateIn: "Feb 9, 2026",
+    section: "B",
+    rollNo: "1002",
   },
   {
     studentId: "STU008",
     name: "Williams Thomas",
+    pass_port: boy1,
     status: "Inactive",
     attendance: "85%",
     grade: "B",
@@ -287,6 +309,8 @@ export const studentList = [
     phone: "+234 9176456732",
     dob: "may-15-2009",
     dateIn: "Feb 9, 2026",
+    section: "A",
+    rollNo: "1021",
   },
 ];
 //student academic performance table
@@ -466,5 +490,21 @@ export const materialsUpload = [
     types: "MP4",
     Size: "45.4 MB",
     UploadDate: "Feb. 1, 2026",
+  },
+];
+
+// system notifications
+
+export const SystemNotifications = [
+  { label: "Email Notifications", description: "Send email alerts to users" },
+  { label: "SMS Notifications", description: "Send text message alerts" },
+  {
+    label: "Parent Notifications",
+    description: "Auto-notify parents of student activities",
+  },
+  { label: "Attendance Alerts", description: "Alert for low attendance" },
+  {
+    label: "Grade Published Alerts",
+    description: "Notify when grades are published",
   },
 ];

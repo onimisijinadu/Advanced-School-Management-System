@@ -1,0 +1,51 @@
+export const AcademicData = [
+  { grade: "Grade 6", average: 78, pass: 92 },
+  { grade: "Grade 7", average: 82, pass: 94 },
+  { grade: "Grade 8", average: 80, pass: 91 },
+  { grade: "Grade 9", average: 85, pass: 96 },
+  { grade: "Grade 10", average: 83, pass: 93 },
+  { grade: "Grade 11", average: 87, pass: 95 },
+  { grade: "Grade 12", average: 89, pass: 97 },
+];
+export const Results = [
+  {
+    id: 1,
+    exam: "Grade 10 - Mid-Term Mathematics",
+    teacher: "Prof. Sarah Johnson",
+    submitted: "March 10, 2026",
+    students: 32,
+    status: "Pending Review",
+  },
+  {
+    id: 2,
+    exam: "Grade 11 - Physics Final",
+    teacher: "Dr. Michael Chen",
+    submitted: "March 9, 2026",
+    students: 28,
+    status: "Approved",
+  },
+  {
+    id: 3,
+    exam: "Grade 12 - English Literature",
+    teacher: "Ms. Emily Rodriguez",
+    submitted: "March 11, 2026",
+    students: 25,
+    status: "Pending Review",
+  },
+  {
+    id: 4,
+    exam: "Grade 12 - English Literature",
+    teacher: "Ms. Emily Rodriguez",
+    submitted: "March 11, 2026",
+    students: 25,
+    status: "Pending Review",
+  },
+  {
+    id: 5,
+    exam: "Grade 12 - English Literature",
+    teacher: "Ms. Emily Rodriguez",
+    submitted: "March 11, 2026",
+    students: 25,
+    status: "Approved",
+  },
+];

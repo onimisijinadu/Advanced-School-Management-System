@@ -1,17 +1,57 @@
 @import "tailwindcss";
 
+/* default light mood */
 :root {
-  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  background-color: #f6f7f5;
-
-  /* font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  --color-background: #f6f7f5;
+  --color-cardBackground: #ffffff;
+  --color-bordercolor: #d1d5dc;
+  --color-primaryBlue: #3b82f6;
+  --color-primaryBlue2: #1450af;
+  --color-textColor: #6b7280;
+  --color-textColor2: #0f172a;
+  --color-textColor3: #000000;
+  --color-idText: #c2b59b;
+  --color-idHeader: #5c3623;
+  --color-idborder: #2d2d2d;
 }
+
+/* dark mood */
+/* [data-theme="dark"] {
+  --color-background: #1a1a1a;
+  --color-cardBackground: #2d2d2d;
+  --color-bordercolor: #7c7d7e;
+  --color-primaryBlue: #3b82f6;
+  --color-primaryBlue2: #1450af;
+  --color-textColor: #9ca3af;
+  --color-textColor2: #f3f4f6;
+  --color-textColor3: #ffffff;
+  --color-idText: #c2b59b;
+  --color-idHeader: #5c3623;
+  --color-idborder: #2d2d2d;
+} */
+
+@theme {
+  --color-background: var(--color-background);
+  --color-cardBackground: var(--color-cardBackground);
+  --color-bordercolor: var(--color-bordercolor);
+  --color-primaryBlue: var(--color-primaryBlue);
+  --color-textColor: var(--color-textColor);
+  --color-textColor2: var(--color-textColor2);
+  --color-textColor3: var(--color-textColor3);
+  --color-primaryBlue2: var(--color-primaryBlue2);
+  --color-idText: var(--color-idText);
+  --color-idHeader: var(--color-idHeader);
+  --color-idborder: var(--color-idborder);
+}
+
 html {
   -webkit-text-size-adjust: 100%;
 }
+
+body {
+  background-color: var(--color-background);
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
