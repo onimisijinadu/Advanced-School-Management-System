@@ -78,9 +78,9 @@ H. Reports & Document
 
 A. Clone Respository
 
-    git clone https://github.com/your-username/simple-school-management-system.git
+    git clone 
 
-    cd simple-school-management-system
+    cd 
 
 B. Install Dependencies
 
